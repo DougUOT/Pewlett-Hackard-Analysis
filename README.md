@@ -26,3 +26,17 @@ Follow below the goals for this module:
 * Software: PgAdmin 4, version 5.7, PostgreSQL X64 11
 
 ## (ERD's) Entity Relationship Diagrams 
+
+An entity-relationship diagram (ERD) is a flowchart that features various tables and their connections to one another, such as primary and foreign keys, and the data types for each column such as string, integers and booleans.
+
+We use a diagram called Quick DBD to create our ERD. Follow below the image and final results of the tables and their relationship with each other and the data types we selected. 
+
+![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/EmployeeDB.png)
+
+We use varchar in these columns because the fields contain characters of fluctuating lengths. A key image shows up close to the dept_no line, demonstrating that it is the table's primary key, and varchar shows its sort.
+
+## Results
+
+### 1) Objective 1: The Number of Retiring Employees by Title
+
+
