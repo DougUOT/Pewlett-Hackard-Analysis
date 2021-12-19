@@ -78,3 +78,110 @@ In order to follow the mentorship program, we create a SQL Code below. Applying 
 The result obtained was the list of 1549 employees eligible for the mentorship program at Pewlett-Hackard company.
 
 ![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del2_Img2_Output.PNG)
+
+Follow below the SQL Code in order to retrieve the information of the number of employees eligible for the mentorship program grouped by title and sort by count (largest to smallest)
+
+![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del2_Img3_codeSQL.PNG)
+
+Follow below the result of the SQL Code above. The result was saved on the table mentorship_eligibility_counts. For those employees eligible for the mentorship program, 403 are Senior Staff, 402 are Engineer, followed by Staff (321), Senior Engineer (287), Technique Leader (77) and 59 Assistant Engineer.
+
+![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del2_Img4_Output.PNG)
+
+### 3) Objective 3: A written report on the employee database analysis:
+
+We need write a report to help the manager prepare for the upcoming "silver tsunami."
+
+The analysis should contain the following:
+
+ * 3.1) Overview of the analysis: Explain the purpose of this analysis.
+ * 3.2) Results: Provide a bulleted list with four major points from the two analysis deliverables. Use images as support where needed.
+ * 3.3) Summary: Provide high-level responses to the following questions, then provide two additional queries or tables that may provide more insight into the upcoming "silver tsunami."
+    * How many roles will need to be filled as the "silver tsunami" begins to make an impact?
+    * Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
+
+####  * 3.1) Overview of the analysis: Explain the purpose of this analysis.
+
+he Pewlett-Hackard company has 240,124 current employees, and 38% are eligible for retirement. This group is related to those employees born between 1952 and 1955, known as baby boomers, who begin to retire rapidly. So the company is looking for the future and will work in two ways, the first offering a retirement bundle for the people who meet the particular measures. The second one is that the company is starting to think about which position will need to be filled soon, who will retire in the next few years and how many positions the company needs to fill.
+
+So, the results and findings after a Data Analysis using PostgreSQL will provide information that will help the company, and all stakeholders make a better decision or even prepare a strategic plan to see how many positions and which ones must be filled in the near future.
+
+Follow below the number of current employees by title (Code SQL & Figure)
+
+![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del3_Img1_Curr_emp_title_codeSQL.PNG)
+
+The company has 85,939 Senior Engineer, 82,024 Senior Staff and 30983 Engineer as the most of the titles as current employees, all these titles together represent around 83% of the total current employee at Pewlett-Hackard.
+
+![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del3_Img2_Curr_emp_title.PNG)
+
+Follow below the number of current employees by department (Code SQL & Figure)
+
+![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del3_Img3_Curr_emp_dept_codeSQL.PNG)
+
+The company has 61,386 employees working in the Development Department, followed by 53,304 in Production and 37,701 in Sales. All these departments together represent around 63% of the total current employee at Pewlett-Hackard.
+
+![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del3_Img4_Curr_emp_dept_.PNG)
+
+####  * 3.2) Results: Provide a bulleted list with four major points from the two analysis deliverables. Use images as support where needed.
+
+1) One of the significant points from the two analysis deliverables is the importance of Data Analysis and cleaning data to deliver accurate information. The company had 61,318 duplicate rows; before the cleaning data on the retirement_titles table, we had 133,776 rows; after the analysis and cleaning data applying the SQL code, the final result on the unique_titles was 72,458 rows. Based on these results, we move forward and create in the following steps the mentorship_eligibility one of the objectives of this project. 
+
+Follow below the SQL code & Figure (before data cleaning):
+
+![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del3_Img5_before%20cleaning%20data_codeSQL.PNG)
+
+![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del3_Img6_before%20cleaning%20data_Output.PNG)
+
+Follow below the SQL code & figure (After data cleaning, removing the duplicates rows)
+
+![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del3_Img7_after%20cleaning%20data_codeSQL.PNG)
+
+![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del1_Img6_DataOutput.PNG)
+
+2) Considering the number as a current employee as 240,124 and 72,458 (table unique_titles) as eligible to retire shortly, the Pewlett-Hackard has 30% of the workforce that will become vacancies in a few years. This result means that for every 100 employees, 30 are close to retirement. 
+
+3) Related to the number of senior employees that will retire soon (table unique_titles) by title, we have 50842 employees, representing around 70% of the employee working in the senior position at the company. Senior positions mean that these employees have considerable experience. It is not easy to replace them internally in the company quickly, even hiring new employees, because new employees have a learning curve. 
+
+![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del1_Img6_DataOutput.PNG)
+
+4) Due to the number of employees that are eligible to retire (72,458 employees), even with the mentorship program offered by the company, just 1549 employees met the company's criteria. It represents just over 2% percent.
+
+![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del2_Img4_Output.PNG)
+
+####  * 3.3) Summary: Provide high-level responses to the following questions, then provide two additional queries or tables that may provide more insight into the upcoming "silver tsunami."
+    * How many roles will need to be filled as the "silver tsunami" begins to make an impact?
+   
+    
+ We are considering as the tsunumi silver for the next 10 years, an huge impact if the company will not take any actions in order to filled the roles on the company. Follow below the SQL code in order to get this information. 
+ 
+ ![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del3_Img8_tsunami_silver_codeSQL.PNG)
+ 
+ So, according to the filter selected on the SQL above, considering ten years ahead (between 1956 and 1966), for the employees hired between 1985 and 1988, the company will have a gap of 39,644 roles to be filled. The senior position such as Senior Staff and Senior Engineer will represent around 56% of the roles should be filled in the future.
+ 
+ ![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del3_Img9_tsunami_silver_Output.PNG)
+
+    * Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
+  
+  The Pewlett Hackard has a significant number of senior employees, which could be considered a strength that could be used just for the short term to develop a mentorship program for training and coaching in order to develop some potential employees for filling some internal roles. 
+  
+  ![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del3_Img10_mentor_codeSQL.PNG)
+  
+  Despite that, 26,139 employees will be eligible for retirement for the next five years, and 14,560 are related to senior positions such as Senior Staff and Senior Engineer.
+  The Pewlett Hackard has a big challenge ahead and has to implement a concrete action plan as soon as possible to mitigate any issue in the face of the risk of not having employees fill the vacancies positions.
+  
+  ![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del3_Img11_mentor_Output.PNG)
+  
+
+### Others recommendations for the Pewlett Hackard as an Action Plan
+  
+ Due to the short term to fill the roles shortly, the company should consider immediately taking four extra action plans.
+
+1) Develop an extensive internship program with partnerships with Universities surrounding the company, especially in Engineer.
+2) As the base of the last performance review of the employees, create an internal development plan, working together with the senior position to coach and promote potential employees to fill the roles.
+3) Develop cross-function roles creating incentives for employees to apply for a new career plan in departments with high needs to fill the roles.
+4) Criar um plano educacional para melhorar os skills necessarios para ocupar as posicoes mais senior.
+  
+## Recommendations for future Analysis
+
+In order to improve this project, write a SQL code to complement this project, analyzing the employee's turnover by department, considering the company's start date and company departure date. Also, develop an analysis looking at the millennial generation and the z generation to determine if the Pewlett-Hackard company will have a balanced workforce or prepare for the coming decades.
+  
+
