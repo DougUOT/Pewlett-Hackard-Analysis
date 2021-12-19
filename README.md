@@ -39,4 +39,42 @@ We use varchar in these columns because the fields contain characters of fluctua
 
 ### 1) Objective 1: The Number of Retiring Employees by Title
 
+Using the ERD you created in this module as a reference and your knowledge of SQL queries, create a Retirement Titles table that holds all the titles of employees who were born between January 1, 1952 and December 31, 1955. Because some employees may have multiple titles in the database—for example, due to promotions—you’ll need to use the DISTINCT ON statement to create a table that contains the most recent title of each employee. Then, use the COUNT() function to create a table that has the number of retirement-age employees by most recent job title. Finally, because we want to include only current employees in our analysis, be sure to exclude those employees who have already left the company.
 
+Writing the SQL code. Creating a table called retirement_titles.csv, filtering the data on the birth_date column to retrieve employees who were born between 1952 and 1955 and order by the employee number.
+
+![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del1_Img1_codeSQL.PNG)
+
+The result on the retirement_titles.csv show that this table has 133,776 rows, with some duplicate lines. It happens because some employees highlighted in the table below have changed their job position (title) during their career at the Pewlett-Hackard company.
+
+![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del1_Img7_duplicate%20emp_no.PNG)
+
+For example, the employee name Sumant Peac has changed three times of their job position, this worker started as a Assistant Engineer in 1985-02-18, in 1990-02-18 this employee changed to Engineer and 5 years after that this employee changed to Senior Engineer. Note that the employee number keept the same, after changed on their job position.
+
+Follow below the SQL Code developed to remove the duplicates and keep only the recent title of each employee. Also, we exclude those employees who have already left the company by filtering on to_date to keep only those dates equal to '9999-01-01' and order by employee number. We create a table called unique_titles.csv.
+
+![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del1_Img3_codeSQL.PNG)
+
+After running the SQL code above, we got a table without duplicate data with 72,458 rows, a 54% reduction compared to the previous table. Note below that the employee name Sumant Peac has just one line with the most recent title
+
+![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del1_Img4_DataOutput.PNG)
+
+We wrote another SQL Code to retrieve the number of employees by their most recent job title who are about to retire and group by title and sort the count column in descending order. The results of this Data Output were saved on the table called retiring_titles.csv.
+
+![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del1_Img5_codeSQL.PNG)
+
+As a result related to the table retiring_titles, we do have the number of Retiring Employees by Title, that as 25,916 Senior Engineer (36% of the total), 24,926 Senior Staff (34% of the total), 9285 Engineer, followed by Staff (7636), Technique Leader (3603), Assistant Leader (1090) and two managers.
+
+![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del1_Img6_DataOutput.PNG)
+
+### 2) Objective 2: The Employees Eligible for the Mentorship Program 
+
+Using the ERD you created in this module as a reference and your knowledge of SQL queries, create a mentorship-eligibility table that holds the current employees who were born between January 1, 1965 and December 31, 1965.
+
+In order to follow the mentorship program, we create a SQL Code below. Applying the filter the data on the to_date column to all the current employees, then filter the data on the birth_date columns to get all the employees whose birth dates are between January 1, 1965, and December 31, 1965, order by employee number. The Data Output was saved in the file called mentorship_eligibility.csv.
+
+![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del2_Img1_codeSQL.PNG)
+
+The result obtained was the list of 1549 employees eligible for the mentorship program at Pewlett-Hackard company.
+
+![](https://github.com/DougUOT/Pewlett-Hackard-Analysis/blob/main/Analysis-Project-Folder/Pewlett-Hackard-Analysis-Folder/Data/Resources/Del2_Img2_Output.PNG)
