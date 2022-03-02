@@ -5,9 +5,7 @@ Data Analysis using SQL, Data modelling and Data engineering
 
 Pewlett Hackard is a large company with thousands of employees, many of these employees were born in the 1950s and are approaching their retirement age. This project will apply our data analysis knowledge, create entity relationship diagrams (ERD's), and build an employee database with SQL applying data modelling, engineering, and data analysis skills on PgAdmin. The company made the database available in 6 CSV files in the data folder. Our main objective is to review and deliver a list of all employees eligible for the retirement package to the Human Resources analyst. Furthermore, after the data analysis, we will deliver findings and results that will help the company to make better decisions regarding the job positions that will need to be filled in the near future in order to cover the vacancies.
 
-This assignment is related to the Bootcamp Data Analytics from the University of Toronto and comprises the goals below for this module: 
-
-Follow below the goals for this module:
+Follow below the goals for this project:
 
 1) Objective 1: The Number of Retiring Employees by Title
 2) Objective 2: The Employees Eligible for the Mentorship Program 
